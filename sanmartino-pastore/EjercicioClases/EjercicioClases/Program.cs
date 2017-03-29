@@ -10,6 +10,8 @@ namespace EjercicioClases
     {
         static void Main(string[] args)
         {
+            
         }
+        
     }
 }

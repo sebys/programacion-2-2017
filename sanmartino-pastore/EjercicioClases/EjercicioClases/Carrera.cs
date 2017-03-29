@@ -8,8 +8,19 @@ namespace EjercicioClases
 {
     class Carrera
     {
-        public Materia Materias { get; set; }
+        public List<Materia> Materia { get; set; }
         public string TituloCarrera { get; set; }
         public List<string> TituloMedio { get; set; }
+        
+        public int CantidadAlumnos()
+        {
+            int totalAlum = 0;
+            foreach (var c in Materia)
+            {
+                totalAlum = c.Alumnos.Count();
+            }
+            return totalAlum;
+        }
     }
+
 }
