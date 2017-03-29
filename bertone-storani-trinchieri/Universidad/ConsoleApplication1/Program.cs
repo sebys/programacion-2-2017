@@ -33,7 +33,7 @@ namespace ConsoleApplication2
 
     class Año
     {
-        public List<String> Materias { get; set; }
+        public List<Materia> Materias { get; set; }
 
     }
 
@@ -41,6 +41,12 @@ namespace ConsoleApplication2
     {
         public string JefeCatedra { get; set; }
         public List<Año> MateriasAño { get; set; }
+        public int AñosCursado { get; set; }
+        public List<string> DepartamentosAcademicos { get; set; }
+        public List<string> Titulos { get; set; }
+
+
+
 
     }
     class Materia
@@ -48,18 +54,30 @@ namespace ConsoleApplication2
         public string Nombre { get; set; }
         public string Condicion { get; set; }
         public string Horarios { get; set; }
+        public List<Materia> CorrelativasFuertes { get; set; }
+        public List<Materia> CorrelativasDebiles { get; set; }
+        public bool RendirLibre { get; set; }
+        public bool Promocionar { get; set; }
+
+
+
     }
-    class Alumno: Persona
+    class Alumno : Persona
     {
         public string Carrera { get; set; }
         public List<Materia> MateriasCursadas { get; set; }
-         
+
 
     }
 
-    class Profesor: Persona
+    class Profesor : Persona
     {
         public List<Materia> MateriasDictadas { get; set; }
+        public List<string> Titulos { get; set; }
+        public int Antiguedad { get; set; }
+        public List<string> Trabajos { get; set; }
+        public int HorasSemanales { get; set; }
+
 
     }
 }
