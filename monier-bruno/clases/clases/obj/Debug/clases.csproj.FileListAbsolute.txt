@@ -1,2 +1,1 @@
 D:\Bruno, A\PROGRAMACION\C#\tercero\clases\clases\bin\Debug\clases.exe.config
-C:\Users\gianfranco\Documents\GitHub\programacion-2-2017\monier-bruno\clases\clases\bin\Debug\clases.exe.config

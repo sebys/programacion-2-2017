@@ -11,9 +11,64 @@ namespace clases
         ingenieria, abogacia, turismo
     }
 
+    public class Materia
+    {
+        public string nombremateria { get; set; }
+        public int canthoras { get; set; }
+        public bool promocion { get; set; }
+    }
+
+    public class InformacionPersonal
+    {
+        public string direccion { get; set; }
+        public string nombre { get; set; }
+        public int telefono { get; set; }
+        public int edad { get; set; }
+    }
+
+
+    public class Persona
+    {
+        public InformacionPersonal informacion { get; set; }
+        public double buenaconducta { get; set; }
+    }
+
+
+    public class Alumno : Persona
+    {
+        public Carrera carrera { get; set; }
+        public int asistencias { get; set; }
+    }
+
+    class Profesor : Persona
+    {
+        public int canthorasdadas { get; set; }
+        public Carrera carrera { get; set; }
+        public int antiguedad { get; set; }
+        public double sueldo { get; set; }
+    }
+
+    public class Carrera
+    {
+        public carreras nomebrecarrera { get; set; }
+        public List<Materia> materias { get; set; }
+        public int añoscursados { get; set; }
+        public List<Alumno> listaalumnos { get; set; }
+    }
+
+
+
+
+    /// <summary>
+    /// ////////////////
+    /// </summary>
+
+
+
+
     public class departamento
     {
-        public informacionPersonal informacion { get; set; }
+        public InformacionPersonal informacion { get; set; }
     }
 
     public class cuota
@@ -27,43 +82,17 @@ namespace clases
         public cuota cuota { get; set; }
     }
     
-    public class carrera
-    {
-        public carreras nomebrecarrera { get; set; }
-        public List<string> materias { get; set; }
-    }
+    
 
-    public class informacionPersonal
-    {
-        public string direccion { get; set; }
-        public string nombre { get; set; }
-        public int telefono { get; set; }
-        public int edad { get; set; }
-    }
+   
 
     public class universidad
     {
-        public informacionPersonal informacion { get; set; }
+        public InformacionPersonal informacion { get; set; }
         public carreras carrera { get; set; }
     }
 
-    public class persona
-    {
-        public informacionPersonal informacion { get; set; }
-    }
-
-
-    class alumno : persona
-    {
-        public carrera carrera { get; set; }
-        public int asistencias { get; set; }
-    }
-
-    class profesor : persona
-    {
-        public int canthorasdadas { get; set; }
-        public carrera carrera { get; set; }
-    }
+   
     
     class Program
     {
