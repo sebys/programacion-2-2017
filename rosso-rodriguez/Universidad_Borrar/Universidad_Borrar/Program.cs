@@ -18,6 +18,7 @@ namespace Universidad_Borrar
         public CicloLectivo CicloCarrera { get; set; }
         public Materia MateriaCarrera { get; set; }
         public Profesores ProfeCarrera { get; set; }
+	public int TotalMaterias {get; set;}
 
     }
     public class Materia
@@ -41,7 +42,11 @@ namespace Universidad_Borrar
     }
     public class Profesores
     {
-
+        public int Edad { get; set; }
+        public string Nombre { get; set; }
+        public double Sueldo { get; set; }
+        public int CantidadDeMateriasQueDa { get; set; }
+        public string Profesion { get; set; }
     }
     public class Examenes
     {

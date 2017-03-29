@@ -1,1 +1,2 @@
 C:\Users\Usuario\Desktop\Universidad_Borrar\Universidad_Borrar\bin\Debug\Universidad_Borrar.exe.config
+C:\Users\Usuario\Documents\GitHub\programacion-2-2017\rosso-rodriguez\Universidad_Borrar\Universidad_Borrar\bin\Debug\Universidad_Borrar.exe.config
