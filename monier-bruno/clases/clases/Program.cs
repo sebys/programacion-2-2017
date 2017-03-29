@@ -16,6 +16,12 @@ namespace clases
         public string nombremateria { get; set; }
         public int canthoras { get; set; }
         public bool promocion { get; set; }
+        public List<Alumno> listaalumnos { get; set; }
+
+        public Materia()
+        {
+            listaalumnos = new List<Alumno>();
+        }
     }
 
     public class InformacionPersonal
@@ -24,6 +30,7 @@ namespace clases
         public string nombre { get; set; }
         public int telefono { get; set; }
         public int edad { get; set; }
+
     }
 
 
@@ -53,19 +60,33 @@ namespace clases
         public carreras nomebrecarrera { get; set; }
         public List<Materia> materias { get; set; }
         public int añoscursados { get; set; }
-        public List<Alumno> listaalumnos { get; set; }
+
+        public Carrera()
+        {
+            añoscursados = 5;
+            materias = new List<Materia>();
+        }
+
+        public int TotalAlumnos()
+        {
+            int cantidadalumnos = 0;
+            foreach (var item in materias)
+            {
+                cantidadalumnos = cantidadalumnos + item.listaalumnos.Count();
+            }
+
+            return cantidadalumnos;
+
+        }
     }
 
-
-
+    
 
     /// <summary>
     /// ////////////////
     /// </summary>
 
-
-
-
+        
     public class departamento
     {
         public InformacionPersonal informacion { get; set; }
@@ -98,6 +119,24 @@ namespace clases
     {
         static void Main(string[] args)
         {
+            Carrera Ingenieria = new Carrera();
+            Materia Calculo = new Materia();
+            Materia Programacion = new Materia();
+            Alumno nuevo = new Alumno();
+            Alumno nuevo2 = new Alumno();
+
+            
+
+            Calculo.listaalumnos.Add(nuevo);
+            Calculo.listaalumnos.Add(nuevo2);
+
+            Programacion.listaalumnos.Add(nuevo);
+            Programacion.listaalumnos.Add(nuevo2);
+
+            Ingenieria.materias.Add(Programacion);
+            Ingenieria.materias.Add(Calculo);
+
+            int a = Ingenieria.TotalAlumnos();
         }
     }
 }
