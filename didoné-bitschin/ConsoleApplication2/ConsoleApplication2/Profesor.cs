@@ -9,5 +9,7 @@ namespace ConsoleApplication2
     class Profesor:Persona
     {
         public string Titulos { get; set; }
+        public int CantidadHoras { get; set; }
+        public List<Carrera> Carreras { get; set; }
     }
 }
