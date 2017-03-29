@@ -12,8 +12,8 @@ namespace ConsoleApplication2
         public List<Materia> CorrelativasDebiles { get; set; }
         public List<Materia> CorrelativasFuertes { get; set; }
         public int CantidadHoras { get; set; }
-        public List<Profesor> profesores{ get; set; }
-        public List<Alumno> alumnos { get; set; }
-        public Horario horario { get; set; }
+        public List<Profesor> Profesores{ get; set; }
+        public List<Alumno> Alumnos { get; set; }
+        public Horario Horario { get; set; }
     }
 }

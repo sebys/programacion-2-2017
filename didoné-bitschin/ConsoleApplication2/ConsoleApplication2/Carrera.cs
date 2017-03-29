@@ -10,10 +10,48 @@ namespace ConsoleApplication2
 
     class Carrera
     {
+        //jefe carrera
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public Tipo Tipo { get; set; }
         public List<Materia> Materias { get; set; }
         public Titulo Titulo { get; set; }
+
+        public Carrera()
+        {
+            this.Materias = new List<Materia>();
+        }
+
+        public int CantidadAlumnos ()
+        {
+            List<Alumno> alumnosCarrera = new List<Alumno>();
+            bool noExiste = false;
+            foreach (var item in Materias)
+            {
+                foreach (var item2 in item.Alumnos)
+                {
+                    foreach (var item3 in alumnosCarrera)
+                    {
+                        //noExiste = item2 != item3;
+                        noExiste = false;
+                        if (item2 != item3)
+                        {
+                            noExiste = true;
+                        }
+                        else
+                        {
+                            noExiste = false;
+                            break;
+                        }
+                    }
+
+                    if (noExiste)
+                    {
+                        alumnosCarrera.Add(item2);
+                    }
+                }               
+            }
+            return alumnosCarrera.Count();
+        }
     }
 }
