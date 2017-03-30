@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace Descomposicion_universidad
 {
-    public class Profesor
+    public class Alumno
     {
-        public string Nombre { get; set; }
-
-        public int DNI { get; set; }
-
-        //public List<Aula> AulasAsignadas { get; set; }
+        public string Nombre { get; set; } = "";
     }
 }

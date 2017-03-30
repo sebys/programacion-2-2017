@@ -1,0 +1,6 @@
+D:\Emanuel Stradella\Documents\UCSE\Programación II\C#\Descomposicion universidad\Descomposicion universidad\bin\Debug\Descomposicion universidad.exe.config
+D:\Emanuel Stradella\Documents\UCSE\Programación II\C#\Descomposicion universidad\Descomposicion universidad\bin\Debug\Descomposicion universidad.exe
+D:\Emanuel Stradella\Documents\UCSE\Programación II\C#\Descomposicion universidad\Descomposicion universidad\bin\Debug\Descomposicion universidad.pdb
+D:\Emanuel Stradella\Documents\UCSE\Programación II\C#\Descomposicion universidad\Descomposicion universidad\obj\Debug\Descomposicion universidad.csprojResolveAssemblyReference.cache
+D:\Emanuel Stradella\Documents\UCSE\Programación II\C#\Descomposicion universidad\Descomposicion universidad\obj\Debug\Descomposicion universidad.exe
+D:\Emanuel Stradella\Documents\UCSE\Programación II\C#\Descomposicion universidad\Descomposicion universidad\obj\Debug\Descomposicion universidad.pdb
