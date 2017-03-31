@@ -1,0 +1,6 @@
+C:\Users\Nico\Documents\Programacion\programacion-2-2017\casazza-malta-soratti\UniversidadClases\ConsoleApplication21\bin\Debug\ConsoleApplication21.exe.config
+C:\Users\Nico\Documents\Programacion\programacion-2-2017\casazza-malta-soratti\UniversidadClases\ConsoleApplication21\obj\Debug\ConsoleApplication21.exe
+C:\Users\Nico\Documents\Programacion\programacion-2-2017\casazza-malta-soratti\UniversidadClases\ConsoleApplication21\obj\Debug\ConsoleApplication21.pdb
+C:\Users\Nico\Documents\Programacion\programacion-2-2017\casazza-malta-soratti\UniversidadClases\Universidad\bin\Debug\ConsoleApplication21.exe.config
+C:\Users\Nico\Documents\Programacion\programacion-2-2017\casazza-malta-soratti\UniversidadClases\Universidad\obj\Debug\ConsoleApplication21.exe
+C:\Users\Nico\Documents\Programacion\programacion-2-2017\casazza-malta-soratti\UniversidadClases\Universidad\obj\Debug\ConsoleApplication21.pdb

@@ -1,0 +1,6 @@
+c:\users\nico\documents\visual studio 2015\Projects\ConsoleApplication21\ConsoleApplication21\bin\Debug\ConsoleApplication21.exe.config
+c:\users\nico\documents\visual studio 2015\Projects\ConsoleApplication21\ConsoleApplication21\bin\Debug\ConsoleApplication21.exe
+c:\users\nico\documents\visual studio 2015\Projects\ConsoleApplication21\ConsoleApplication21\bin\Debug\ConsoleApplication21.pdb
+c:\users\nico\documents\visual studio 2015\Projects\ConsoleApplication21\ConsoleApplication21\obj\Debug\ConsoleApplication21.csprojResolveAssemblyReference.cache
+c:\users\nico\documents\visual studio 2015\Projects\ConsoleApplication21\ConsoleApplication21\obj\Debug\ConsoleApplication21.exe
+c:\users\nico\documents\visual studio 2015\Projects\ConsoleApplication21\ConsoleApplication21\obj\Debug\ConsoleApplication21.pdb
