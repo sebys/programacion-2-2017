@@ -1,0 +1,9 @@
+C:\Users\gianfranco\Documents\GitHub\programacion-2-2017\bertone-storani-trinchieri\Universidad\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+C:\Users\gianfranco\Documents\GitHub\programacion-2-2017\bertone-storani-trinchieri\Universidad\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+C:\Users\gianfranco\Documents\GitHub\programacion-2-2017\bertone-storani-trinchieri\Universidad\UnitTestProject1\bin\Debug\ConsoleApplication1.exe
+C:\Users\gianfranco\Documents\GitHub\programacion-2-2017\bertone-storani-trinchieri\Universidad\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\gianfranco\Documents\GitHub\programacion-2-2017\bertone-storani-trinchieri\Universidad\UnitTestProject1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\gianfranco\Documents\GitHub\programacion-2-2017\bertone-storani-trinchieri\Universidad\UnitTestProject1\bin\Debug\es\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+C:\Users\gianfranco\Documents\GitHub\programacion-2-2017\bertone-storani-trinchieri\Universidad\UnitTestProject1\obj\Debug\Ejemplo.csprojResolveAssemblyReference.cache
+C:\Users\gianfranco\Documents\GitHub\programacion-2-2017\bertone-storani-trinchieri\Universidad\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+C:\Users\gianfranco\Documents\GitHub\programacion-2-2017\bertone-storani-trinchieri\Universidad\UnitTestProject1\obj\Debug\UnitTestProject1.pdb

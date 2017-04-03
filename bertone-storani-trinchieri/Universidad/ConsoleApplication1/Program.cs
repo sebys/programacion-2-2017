@@ -46,6 +46,7 @@ namespace ConsoleApplication2
     
     public class Carrera
     {
+
         public string JefeCatedra { get; set; }
         public List<Año> MateriasAño { get; set; }
         public int AñosCursado { get; set; }
