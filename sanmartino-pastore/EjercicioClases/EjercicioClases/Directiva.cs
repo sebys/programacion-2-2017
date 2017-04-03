@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EjercicioClases
 {
-    class Directiva: Persona
+    public class Directiva: Persona
     {
         public string CargoDirectivo { get; set; }
     }

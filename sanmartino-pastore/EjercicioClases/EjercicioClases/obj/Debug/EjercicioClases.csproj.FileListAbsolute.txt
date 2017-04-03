@@ -1,1 +1,7 @@
 c:\users\francisco\documents\visual studio 2015\Projects\EjercicioClases\EjercicioClases\bin\Debug\EjercicioClases.exe.config
+D:\ProgramacionIIGit\programacion-2-2017\sanmartino-pastore\EjercicioClases\EjercicioClases\bin\Debug\EjercicioClases.exe.config
+D:\ProgramacionIIGit\programacion-2-2017\sanmartino-pastore\EjercicioClases\EjercicioClases\bin\Debug\EjercicioClases.exe
+D:\ProgramacionIIGit\programacion-2-2017\sanmartino-pastore\EjercicioClases\EjercicioClases\bin\Debug\EjercicioClases.pdb
+D:\ProgramacionIIGit\programacion-2-2017\sanmartino-pastore\EjercicioClases\EjercicioClases\obj\Debug\EjercicioClases.csprojResolveAssemblyReference.cache
+D:\ProgramacionIIGit\programacion-2-2017\sanmartino-pastore\EjercicioClases\EjercicioClases\obj\Debug\EjercicioClases.exe
+D:\ProgramacionIIGit\programacion-2-2017\sanmartino-pastore\EjercicioClases\EjercicioClases\obj\Debug\EjercicioClases.pdb

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EjercicioClases
 {
-    class Direccion
+    public class Direccion
     {
         public string NombreDireccion { get; set; }
         public int NroEdificio { get; set; }

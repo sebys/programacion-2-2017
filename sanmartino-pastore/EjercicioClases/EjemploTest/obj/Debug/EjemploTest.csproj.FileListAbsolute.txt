@@ -1,0 +1,9 @@
+D:\ProgramacionIIGit\programacion-2-2017\sanmartino-pastore\EjercicioClases\EjemploTest\bin\Debug\EjemploTest.dll
+D:\ProgramacionIIGit\programacion-2-2017\sanmartino-pastore\EjercicioClases\EjemploTest\bin\Debug\EjemploTest.pdb
+D:\ProgramacionIIGit\programacion-2-2017\sanmartino-pastore\EjercicioClases\EjemploTest\bin\Debug\EjercicioClases.exe
+D:\ProgramacionIIGit\programacion-2-2017\sanmartino-pastore\EjercicioClases\EjemploTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\ProgramacionIIGit\programacion-2-2017\sanmartino-pastore\EjercicioClases\EjemploTest\bin\Debug\EjercicioClases.pdb
+D:\ProgramacionIIGit\programacion-2-2017\sanmartino-pastore\EjercicioClases\EjemploTest\bin\Debug\es\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+D:\ProgramacionIIGit\programacion-2-2017\sanmartino-pastore\EjercicioClases\EjemploTest\obj\Debug\EjemploTest.csprojResolveAssemblyReference.cache
+D:\ProgramacionIIGit\programacion-2-2017\sanmartino-pastore\EjercicioClases\EjemploTest\obj\Debug\EjemploTest.dll
+D:\ProgramacionIIGit\programacion-2-2017\sanmartino-pastore\EjercicioClases\EjemploTest\obj\Debug\EjemploTest.pdb

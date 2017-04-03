@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EjercicioClases
 {
-    class Alumno
+    public class Alumno: Persona
     {
         public bool EstadoContable { get; set; }
         public int HistorialMaterias { get; set; }

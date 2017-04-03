@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EjercicioClases
 {
-    class EstadoContable
+    public class EstadoContable
     {
     }
 }

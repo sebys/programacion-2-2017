@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EjercicioClases
 {
-    class EstadoMateria
+    public class EstadoMateria
     {
     }
 }
