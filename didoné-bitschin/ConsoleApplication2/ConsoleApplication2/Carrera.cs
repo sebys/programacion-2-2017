@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication2
 {
-    enum Tipo {pregrado, grado, posgrado}
+    public enum Tipo {pregrado, grado, posgrado}
 
-    class Carrera
+    public class Carrera
     {
         //jefe carrera
         public string Nombre { get; set; }
@@ -30,10 +30,10 @@ namespace ConsoleApplication2
             {
                 foreach (var item2 in item.Alumnos)
                 {
+                    noExiste = true;
                     foreach (var item3 in alumnosCarrera)
                     {
                         //noExiste = item2 != item3;
-                        noExiste = false;
                         if (item2 != item3)
                         {
                             noExiste = true;
@@ -42,14 +42,13 @@ namespace ConsoleApplication2
                         {
                             noExiste = false;
                             break;
-                        }
+                        }                      
                     }
-
                     if (noExiste)
                     {
                         alumnosCarrera.Add(item2);
                     }
-                }               
+                }              
             }
             return alumnosCarrera.Count();
         }

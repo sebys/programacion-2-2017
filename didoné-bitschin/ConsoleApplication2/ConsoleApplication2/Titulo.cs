@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication2
 {
-    enum Alcance { Nacional, Internacional}
-    class Titulo
+    public enum Alcance { Nacional, Internacional}
+    public class Titulo
     {
         public string Nombre { get; set; }
         public Alcance alcance { get; set; }

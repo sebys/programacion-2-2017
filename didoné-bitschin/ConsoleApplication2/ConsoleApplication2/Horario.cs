@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication2
 {
-    class Horario
+    public class Horario
     {
         public string Dia { get; set; }
         public int HorarioInicio { get; set; }

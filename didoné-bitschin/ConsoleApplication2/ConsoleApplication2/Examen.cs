@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication2
 {
-    enum TipoExamen
+    public enum TipoExamen
     {
         Parcial,
         Final,
         TrabajoPractico
     }
 
-    class Examen
+    public class Examen
     {
         public TipoExamen tipo { get; set; }
     }

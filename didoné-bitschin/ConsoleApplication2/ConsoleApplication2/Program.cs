@@ -10,9 +10,7 @@ namespace ConsoleApplication2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("escriba una materia");
-            var materia = new Materia();
-            materia.Nombre = Convert.ToString(Console.ReadLine());
+           
         }
     }
 }

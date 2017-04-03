@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication2
 {
-    class Alumno:Persona
+    public class Alumno:Persona
     {
         public bool EstadoContable { get; set; }
         public int CantidadDeMateriasAprobadas { get; set; }

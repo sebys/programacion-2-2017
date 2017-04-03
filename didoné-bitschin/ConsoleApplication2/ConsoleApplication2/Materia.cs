@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication2
 {
-    class Materia
+    public class Materia
     {
         public string Nombre { get; set; }
         public List<Materia> CorrelativasDebiles { get; set; }
@@ -15,5 +15,10 @@ namespace ConsoleApplication2
         public List<Profesor> Profesores{ get; set; }
         public List<Alumno> Alumnos { get; set; }
         public Horario Horario { get; set; }
+
+        public Materia()
+        {
+            Alumnos = new List<Alumno>();
+        }
     }
 }
