@@ -11,3 +11,9 @@ C:\Users\Usuario\Documents\GitHub\programacion-2-2017\monier-bruno\clases\clases
 C:\Users\Usuario\Documents\GitHub\programacion-2-2017\monier-bruno\clases\clases\bin\Debug\clases.exe
 C:\Users\Usuario\Documents\GitHub\programacion-2-2017\monier-bruno\clases\clases\bin\Debug\clases.pdb
 C:\Users\Usuario\Documents\GitHub\programacion-2-2017\monier-bruno\clases\clases\obj\Debug\clases.csprojResolveAssemblyReference.cache
+C:\Users\ucsea.dar.LABORATORIOS\Documents\GitHub\programacion-2-2017\monier-bruno\clases\clases\bin\Debug\clases.exe.config
+C:\Users\ucsea.dar.LABORATORIOS\Documents\GitHub\programacion-2-2017\monier-bruno\clases\clases\obj\Debug\clases.exe
+C:\Users\ucsea.dar.LABORATORIOS\Documents\GitHub\programacion-2-2017\monier-bruno\clases\clases\obj\Debug\clases.pdb
+C:\Users\ucsea.dar.LABORATORIOS\Documents\GitHub\programacion-2-2017\monier-bruno\clases\clases\bin\Debug\clases.exe
+C:\Users\ucsea.dar.LABORATORIOS\Documents\GitHub\programacion-2-2017\monier-bruno\clases\clases\bin\Debug\clases.pdb
+C:\Users\ucsea.dar.LABORATORIOS\Documents\GitHub\programacion-2-2017\monier-bruno\clases\clases\obj\Debug\clases.csprojResolveAssemblyReference.cache

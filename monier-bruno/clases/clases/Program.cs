@@ -37,6 +37,11 @@ namespace clases
     {
         public InformacionPersonal informacion { get; set; }
         public double buenaconducta { get; set; }
+
+        public Persona()
+        {
+           this.informacion = new InformacionPersonal();
+        }
     }
 
     public class Alumno : Persona
@@ -104,7 +109,7 @@ namespace clases
         
     public class departamento
     {
-        public InformacionPersonal informacion { get; set; }
+        public InformacionPersonal informacion1 { get; set; }
     }
 
     public class cuota
@@ -141,6 +146,8 @@ namespace clases
             Alumno nuevo2 = new Alumno();
             Alumno nuevo3 = new Alumno();
 
+
+            nuevo.informacion.nombre = "juan";
             nuevo.numeroalumno = 1;
             nuevo2.numeroalumno = 2;
             nuevo3.numeroalumno = 3;
