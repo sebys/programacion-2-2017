@@ -8,22 +8,20 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication21
 {
-    class Carrera
+    public class Carrera
     {
         public carreras NombreCarrera { get; set; }
         public List<Materia> Materias { get; set; }
         public int TiempoCursado { get; set; }
 
+        public Carrera()
+        {
+            this.Materias = new List<Materia>();
+        }
+
         public int TotalAlumnos()
         {
-            int TotalA = 0;
-            foreach (var item in Materias)
-            {
-                TotalA = TotalA + item.Alumnos.Count();
-            }
-
-            return TotalA;
-
+            return this.Materias.SelectMany(x => x.Alumnos).Distinct().Count();
         }
     }
 }
