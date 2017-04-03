@@ -30,7 +30,6 @@ namespace clases
         public string nombre { get; set; }
         public int telefono { get; set; }
         public int edad { get; set; }
-
     }
 
 
@@ -40,11 +39,11 @@ namespace clases
         public double buenaconducta { get; set; }
     }
 
-
     public class Alumno : Persona
     {
         public Carrera carrera { get; set; }
         public int asistencias { get; set; }
+        public int numeroalumno { get; set; }
     }
 
     class Profesor : Persona
@@ -60,6 +59,7 @@ namespace clases
         public carreras nomebrecarrera { get; set; }
         public List<Materia> materias { get; set; }
         public int añoscursados { get; set; }
+        public bool enc { get; set; }
 
         public Carrera()
         {
@@ -69,18 +69,33 @@ namespace clases
 
         public int TotalAlumnos()
         {
+            enc = false;
             int cantidadalumnos = 0;
-            foreach (var item in materias)
+            List<Alumno> totalalumnos = new List<Alumno>();
+
+            foreach (var materia in materias)
             {
-                cantidadalumnos = cantidadalumnos + item.listaalumnos.Count();
+                foreach (var alumno1 in materia.listaalumnos)
+                {
+                    foreach (var alumno2 in totalalumnos)
+                    {
+                        if (alumno2.numeroalumno == alumno1.numeroalumno)
+                        {
+                            enc = true;
+                            break;
+                        }
+                    }
+                    if (enc == false)
+                    {
+                        totalalumnos.Add(alumno1);
+                    }
+                }
             }
+            cantidadalumnos = cantidadalumnos + totalalumnos.Count();
 
             return cantidadalumnos;
-
         }
     }
-
-    
 
     /// <summary>
     /// ////////////////
@@ -124,14 +139,18 @@ namespace clases
             Materia Programacion = new Materia();
             Alumno nuevo = new Alumno();
             Alumno nuevo2 = new Alumno();
+            Alumno nuevo3 = new Alumno();
 
-            
+            nuevo.numeroalumno = 1;
+            nuevo2.numeroalumno = 2;
+            nuevo3.numeroalumno = 3;
 
             Calculo.listaalumnos.Add(nuevo);
             Calculo.listaalumnos.Add(nuevo2);
 
             Programacion.listaalumnos.Add(nuevo);
             Programacion.listaalumnos.Add(nuevo2);
+            Programacion.listaalumnos.Add(nuevo3);
 
             Ingenieria.materias.Add(Programacion);
             Ingenieria.materias.Add(Calculo);
