@@ -69,7 +69,7 @@ namespace clases
         public Carrera()
         {
             añoscursados = 5;
-            materias = new List<Materia>();
+            this.materias = new List<Materia>();
         }
 
         public int TotalAlumnos()
@@ -99,6 +99,30 @@ namespace clases
             cantidadalumnos = cantidadalumnos + totalalumnos.Count();
 
             return cantidadalumnos;
+        }
+
+        public int CargarMateria ( Materia nuevamateria )
+        {  
+            enc = false;
+
+            foreach (Materia materia in materias)
+            {
+                if (materia.nombremateria == nuevamateria.nombremateria)
+                {
+                    enc = true;
+                    break;
+                }
+            }
+            if (enc == false)
+            {
+                materias.Add(nuevamateria);
+            }           
+            else
+            {
+                throw new NotSupportedException("No se puede agregar un objeto duplicado.");
+            }
+
+            return materias.Count();
         }
     }
 
@@ -140,29 +164,15 @@ namespace clases
         static void Main(string[] args)
         {
             Carrera Ingenieria = new Carrera();
-            Materia Calculo = new Materia();
-            Materia Programacion = new Materia();
-            Alumno nuevo = new Alumno();
-            Alumno nuevo2 = new Alumno();
-            Alumno nuevo3 = new Alumno();
+            Materia materia1 = new Materia();
+            Materia materia2 = new Materia();
+            materia1.nombremateria = "Calculo";
+
+            materia2.nombremateria = "Calculo";
 
 
-            nuevo.informacion.nombre = "juan";
-            nuevo.numeroalumno = 1;
-            nuevo2.numeroalumno = 2;
-            nuevo3.numeroalumno = 3;
-
-            Calculo.listaalumnos.Add(nuevo);
-            Calculo.listaalumnos.Add(nuevo2);
-
-            Programacion.listaalumnos.Add(nuevo);
-            Programacion.listaalumnos.Add(nuevo2);
-            Programacion.listaalumnos.Add(nuevo3);
-
-            Ingenieria.materias.Add(Programacion);
-            Ingenieria.materias.Add(Calculo);
-
-            int a = Ingenieria.TotalAlumnos();
+            Ingenieria.CargarMateria(materia1);
+            Ingenieria.CargarMateria(materia2);
         }
     }
 }

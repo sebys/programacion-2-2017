@@ -67,5 +67,42 @@ namespace clases.test
             //assert
             Assert.AreEqual(2, total);
         }
+
+
+        [TestMethod]
+        public void DeberíaPoderAgregarMateria()
+        {
+            //arange
+            var carrera = new Carrera();
+            var materia = new Materia();
+            materia.nombremateria = "Programacion"; 
+
+            //act
+            var totalmateria = carrera.CargarMateria(materia);
+
+            //assert
+            Assert.AreEqual(1, totalmateria);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(NotSupportedException))]
+        public void NoDeberíaPoderAgregarMateriaDuplicada()
+        {
+            //arange
+            var carrera = new Carrera();
+            var materia = new Materia();
+            var materia1 = new Materia();
+            var materia2 = new Materia();
+            materia.nombremateria = "Programacion";
+            materia1.nombremateria = "Programacion";
+            materia2.nombremateria = "Calculo";
+
+            //act
+            carrera.CargarMateria(materia);
+            carrera.CargarMateria(materia1);
+            carrera.CargarMateria(materia2);
+
+            //assert - Exected Exception
+        }
     }
 }
