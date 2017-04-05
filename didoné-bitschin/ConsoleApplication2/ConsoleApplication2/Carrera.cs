@@ -14,12 +14,15 @@ namespace ConsoleApplication2
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public Tipo Tipo { get; set; }
-        public List<Materia> Materias { get; set; }
+        private List<Materia> Materias { get; set; }
+        //private List<Materia> Materias { get { return materias; } }
+        //public List<Materia> materias { get; set; } HACER CON VAR. DE INSTANCIA
         public Titulo Titulo { get; set; }
 
         public Carrera()
         {
             this.Materias = new List<Materia>();
+            //this.materias = new List<Materia>();
         }
 
         public int CantidadAlumnos ()
@@ -51,6 +54,35 @@ namespace ConsoleApplication2
                 }              
             }
             return alumnosCarrera.Count();
+        }
+
+        public void AgregarMaterias(Materia materia)
+        {
+            bool Existe = false;
+
+            foreach (var item in Materias)
+            {
+                if (item == materia)
+                {
+                    Existe = true;
+                    break;
+                }
+                else
+                {
+                    Existe = false;
+                }
+            }
+
+            if (Existe == false)
+            {
+                Materias.Add(materia);
+            }
+        }
+
+        public int CantidadMaterias()
+        {
+            int cantidadMaterias = Materias.Count;
+            return cantidadMaterias;
         }
     }
 }
