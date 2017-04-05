@@ -19,7 +19,26 @@ namespace ConsoleApplication21
             this.Materias = new List<Materia>();
         }
 
-        public int TotalAlumnos()
+        public void AgregarMateria(Materia materia)
+        {
+            int enc = 0;
+            foreach (Materia item in Materias)
+            {
+                if (item.Nombre == materia.Nombre)
+                {
+                    enc = 1;
+                    break;
+                }
+            }
+            if (enc == 0)
+            {
+                Materias.Add(materia);
+            }
+    
+        
+        }
+
+    public int TotalAlumnos()
         {
             return this.Materias.SelectMany(x => x.Alumnos).Distinct().Count();
         }

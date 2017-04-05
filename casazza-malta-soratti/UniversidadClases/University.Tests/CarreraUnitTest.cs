@@ -79,5 +79,25 @@ namespace University.Tests
             // Assert
             Assert.AreEqual(2, total);
         }
+
+        [TestMethod]
+        public void DeberíaPoderAgregarMateria()
+        {
+            //Arrange
+            var materia1 = new Materia() { Nombre = "M1" };
+
+            var carrera = new Carrera();
+            carrera.AgregarMateria(materia1);
+
+
+            // Act
+
+            var total = carrera.Materias.Count;
+
+
+            // Assert
+            Assert.AreEqual(1, total);​
+        }
+​
     }
 }
