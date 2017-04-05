@@ -31,7 +31,7 @@ namespace clases.test
             materia.listaalumnos.Add(alumno2);
 
             Carrera carrera = new Carrera();
-            carrera.materias.Add(materia);
+            carrera.CargarMateria(materia);
 
 
             //act
@@ -57,8 +57,8 @@ namespace clases.test
             materia1.listaalumnos.Add(alumno2);
 
             Carrera carrera = new Carrera();
-            carrera.materias.Add(materia);
-            carrera.materias.Add(materia1);
+            carrera.CargarMateria(materia);
+            carrera.CargarMateria(materia1);
 
 
             //act

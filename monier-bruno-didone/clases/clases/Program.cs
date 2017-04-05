@@ -62,7 +62,7 @@ namespace clases
     public class Carrera
     {
         public carreras nomebrecarrera { get; set; }
-        public List<Materia> materias { get; set; }
+        private List<Materia> materias;
         public int añoscursados { get; set; }
         public bool enc { get; set; }
 
