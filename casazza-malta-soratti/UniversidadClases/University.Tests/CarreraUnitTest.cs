@@ -98,6 +98,26 @@ namespace University.Tests
             // Assert
             Assert.AreEqual(1, total);​
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(NotSupportedException))]
+        public void NoDeberíaPoderAgregarMateriaDuplicada()
+        {
+            //Arrange
+            var materia1 = new Materia() { Nombre = "M1" };
+
+            var carrera = new Carrera();
+            carrera.AgregarMateria(materia1);
+
+
+            // Act
+
+            var total = carrera.Materias.Count;
+
+
+            // Assert
+            Assert.AreEqual(1, total);​​
+        }
 ​
     }
 }
