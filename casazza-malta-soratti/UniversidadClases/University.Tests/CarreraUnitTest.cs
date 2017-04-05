@@ -40,7 +40,7 @@ namespace University.Tests
             materia1.Alumnos.Add(alumno2);
 
             var carrera = new Carrera();
-            carrera.Materias.Add(materia1);
+            carrera.AgregarMateria(materia1);
 
             // Act
             var total = carrera.TotalAlumnos();
@@ -71,7 +71,8 @@ namespace University.Tests
             materia1.Alumnos.Add(alumno2);
 
             var carrera = new Carrera();
-            carrera.Materias.Add(materia1);
+
+            carrera.AgregarMateria(materia1);
 
             // Act
             var total = carrera.TotalAlumnos();
@@ -92,7 +93,7 @@ namespace University.Tests
 
             // Act
 
-            var total = carrera.Materias.Count;
+            var total = carrera.CantidadMaterias();
 
 
             // Assert
@@ -115,7 +116,7 @@ namespace University.Tests
 
             // Act
 
-            var total = carrera.Materias.Count;
+           // var total = carrera.Materias.Count;
 
 
             // Assert

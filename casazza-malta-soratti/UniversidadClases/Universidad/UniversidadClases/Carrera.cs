@@ -11,12 +11,17 @@ namespace ConsoleApplication21
     public class Carrera
     {
         public carreras NombreCarrera { get; set; }
-        public List<Materia> Materias { get; set; }
+        private List<Materia> Materias;
         public int TiempoCursado { get; set; }
 
         public Carrera()
         {
             this.Materias = new List<Materia>();
+        }
+
+        public int CantidadMaterias()
+        {
+            return Materias.Count;
         }
 
         public void AgregarMateria(Materia materia)
