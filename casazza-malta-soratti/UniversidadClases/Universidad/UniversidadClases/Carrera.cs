@@ -27,12 +27,16 @@ namespace ConsoleApplication21
                 if (item.Nombre == materia.Nombre)
                 {
                     enc = 1;
-                    break;
+                    
                 }
             }
             if (enc == 0)
             {
                 Materias.Add(materia);
+            }
+            else
+            {
+                throw new NotSupportedException("No se puede agregar un objeto duplicado.");
             }
     
         

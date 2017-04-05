@@ -96,7 +96,7 @@ namespace University.Tests
 
 
             // Assert
-            Assert.AreEqual(1, total);​
+            Assert.AreEqual(1, total);
         }
 
         [TestMethod]
@@ -105,8 +105,11 @@ namespace University.Tests
         {
             //Arrange
             var materia1 = new Materia() { Nombre = "M1" };
+            var materia2 = new Materia() { Nombre = "M2" };
 
             var carrera = new Carrera();
+            carrera.AgregarMateria(materia1);
+            carrera.AgregarMateria(materia2);
             carrera.AgregarMateria(materia1);
 
 
@@ -116,8 +119,7 @@ namespace University.Tests
 
 
             // Assert
-            Assert.AreEqual(1, total);​​
+            ////Assert.AreEqual(1, total);
         }
-​
     }
 }
