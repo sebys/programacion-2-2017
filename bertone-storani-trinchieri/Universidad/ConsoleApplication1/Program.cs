@@ -42,6 +42,11 @@ namespace ConsoleApplication2
     {
         public List<Materia> Materias { get; set; }
 
+        public Año()
+        {
+            this.Materias = new List<Materia>();
+        }
+
     }
     
     public class Carrera
@@ -52,6 +57,13 @@ namespace ConsoleApplication2
         public int AñosCursado { get; set; }
         public List<DepartamentosAcademicos> DepartamentosCursado { get; set; }
         public List<string> Titulos { get; set; }
+
+        public Carrera()
+        {
+            this.MateriasAño = new List<Año>();
+         //   List<DepartamentosAcademicos> DepartamentosCursado = new List<DepartamentosAcademicos>();
+
+        }
         
         public int TotalAlumnos()
         {
@@ -62,7 +74,7 @@ namespace ConsoleApplication2
             {
                 foreach (var Materia in Año.Materias)
                 {
-                    foreach (var item2 in Materia.Alummnos)
+                    foreach (var item2 in Materia.Alumnos)
                     {
                         foreach (var item in AlumnosTotales)
                         {
@@ -88,9 +100,14 @@ namespace ConsoleApplication2
         public string Horarios { get; set; }
         public List<Materia> CorrelativasFuertes { get; set; }
         public List<Materia> CorrelativasDebiles { get; set; }
-        public List<Alumno> Alummnos { get; set;}
+        public List<Alumno> Alumnos { get; set;}
         public bool RendirLibre { get; set; }
         public bool Promocionar { get; set; }
+
+        public Materia()
+        {
+            this.Alumnos = new List<Alumno>();
+        }
 
     }
 
@@ -98,6 +115,11 @@ namespace ConsoleApplication2
     {
         public string Carrera { get; set; }
         public List<Materia> MateriasCursadas { get; set; }
+
+        public Alumno()
+        {
+            this.MateriasCursadas = new List<Materia>();
+        }
 
     }
 
