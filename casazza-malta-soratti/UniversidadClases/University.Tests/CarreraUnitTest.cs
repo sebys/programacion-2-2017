@@ -133,7 +133,7 @@ namespace University.Tests
             bool variable;
 
 
-            // Act PREGUNTAAAAAAAAR
+            // Act CORREGIR
             if (Universidad.ObtenerUniversidad(clases.carreras.Abogacia, info) == Universidad.ObtenerUniversidad(clases.carreras.Ingenieria, info1))
             {
                 variable = true;
