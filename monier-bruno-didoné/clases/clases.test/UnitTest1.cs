@@ -75,7 +75,7 @@ namespace clases.test
             //arange
             var carrera = new Carrera();
             var materia = new Materia();
-            materia.nombremateria = "Programacion"; 
+            materia.nombremateria = "Programacion";
 
             //act
             var totalmateria = carrera.CargarMateria(materia);
@@ -103,6 +103,18 @@ namespace clases.test
             carrera.CargarMateria(materia2);
 
             //assert - Exected Exception
+        }
+        [TestMethod]
+        public void NoPermitaAgregarMasDeUnaUniversidad()
+        {
+            //arange
+            var un1 = Universidad.AgregarUniversidad();
+
+            //act
+            var un2 = Universidad.AgregarUniversidad();
+
+            //assert
+            Assert.AreEqual(un1, un2);
         }
     }
 }

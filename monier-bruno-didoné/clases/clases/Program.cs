@@ -11,6 +11,31 @@ namespace clases
         ingenieria, abogacia, turismo
     }
 
+    public class Universidad
+    {
+        private static Universidad nuevauniversidad;
+        public InformacionPersonal informacion { get; set; }
+        private static List<carreras> listacarreras = new List<carreras>();
+
+
+        private Universidad()
+        {
+            this.informacion = new InformacionPersonal();
+        }
+
+        public static Universidad AgregarUniversidad()
+        {
+            if (nuevauniversidad == null)
+            {
+                nuevauniversidad = new Universidad();
+                nuevauniversidad.informacion.nombre = "UCSE";
+            }
+            return nuevauniversidad;
+        }
+
+    }
+
+
     public class Materia
     {
         public string nombremateria { get; set; }
@@ -72,7 +97,12 @@ namespace clases
             this.materias = new List<Materia>();
         }
 
-        public int TotalAlumnos()
+        public Carrera(List<Materia> listamaterias) : this()
+        {
+            CargarMateria(listamaterias);
+        }
+
+        public int TotalAlumnos() 
         {
             enc = false;
             int cantidadalumnos = 0;
@@ -124,14 +154,58 @@ namespace clases
 
             return materias.Count();
         }
+
+        public int CargarMateria(List<Materia> listamaterias)
+        {
+            int cantidadmateria = 0;
+            foreach (var materia in listamaterias)
+            {
+               cantidadmateria = CargarMateria(materia);
+            }
+
+            return cantidadmateria;
+        }
+
+
     }
 
-    /// <summary>
-    /// ////////////////
-    /// </summary>
+        /// <summary>
+        /// ////////////////
+        /// </summary>
 
-        
-    public class departamento
+            
+
+
+
+
+
+        //public static Universidad AgregarUniversidad(string nombre)   HACER CON CARRERA
+        //{
+        //    foreach (var universidad in listauniversidades)
+        //    {
+        //        if (universidad.informacion.nombre == nombre)
+        //        {
+        //            return universidad;
+        //        }
+        //    }
+        //    nuevauniversidad = new Universidad();
+        //    nuevauniversidad.informacion.nombre = nombre;
+        //    listauniversidades.Add(nuevauniversidad);
+        //    return nuevauniversidad;
+        //}
+
+
+
+
+
+
+
+
+
+
+
+
+        public class departamento
     {
         public InformacionPersonal informacion1 { get; set; }
     }
@@ -148,14 +222,6 @@ namespace clases
     }
     
     
-
-   
-
-    public class universidad
-    {
-        public InformacionPersonal informacion { get; set; }
-        public carreras carrera { get; set; }
-    }
 
    
     
