@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication21
 {
-    public class Carrera
+    public  class Carrera
     {
         public carreras NombreCarrera { get; set; }
         private List<Materia> Materias;
@@ -19,9 +19,18 @@ namespace ConsoleApplication21
             this.Materias = new List<Materia>();
         }
 
+       
+
+       
+
         public int CantidadMaterias()
         {
-            return Materias.Count;
+            return CantidadMaterias(20); 
+        }
+
+        public int CantidadMaterias(int numero)
+        {
+            return Materias.Count + numero;
         }
 
         public void AgregarMateria(Materia materia)

@@ -12,4 +12,5 @@ namespace ConsoleApplication21
         public Carrera carrera { get; set; }
         public int asistencias { get; set; }
     }
+
 }

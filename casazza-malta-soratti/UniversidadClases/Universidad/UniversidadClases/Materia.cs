@@ -16,5 +16,13 @@ namespace ConsoleApplication21.UniversidadClases
         {
             Alumnos = new List<Alumno>();
         }
+
+        public Materia(List<Materia> materias) :this() 
+        {            
+            foreach (var item in materias)
+            {
+                materias.Add(item);
+            }
+        }
     }
 }

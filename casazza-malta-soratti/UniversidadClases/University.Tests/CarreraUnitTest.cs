@@ -122,5 +122,30 @@ namespace University.Tests
             // Assert
             ////Assert.AreEqual(1, total);
         }
+
+        [TestMethod]
+        public void ComprobarSingleton()
+        {
+            //Arrange
+            InformacionPersonal info = new InformacionPersonal();
+            InformacionPersonal info1 = new InformacionPersonal();
+            
+            bool variable;
+
+
+            // Act PREGUNTAAAAAAAAR
+            if (Universidad.ObtenerUniversidad(clases.carreras.Abogacia, info) == Universidad.ObtenerUniversidad(clases.carreras.Ingenieria, info1))
+            {
+                variable = true;
+
+            }
+            else
+            {
+                variable = false;
+            }
+
+            // Assert
+            Assert.AreEqual(true, variable);
+        }
     }
 }
