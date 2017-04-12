@@ -1,4 +1,5 @@
 ﻿using ConsoleApplication21;
+using ConsoleApplication21.UniversidadClases;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,10 @@ namespace clases
     {
         static void Main(string[] args)
         {
+            Carrera carrera = new Carrera();
+            carrera.AgregarMateria(new Materia {Nombre = "M1" });
+            Console.WriteLine(Convert.ToString(carrera.CantidadMaterias()));
+            Console.ReadLine();
         }
     }
 }

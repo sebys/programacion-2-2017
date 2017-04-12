@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication21
 {
-    class Persona
+    public class Persona
     {
         public InformacionPersonal informacion { get; set; }
         public double buenaconducta { get; set; }

@@ -14,7 +14,7 @@ namespace EjercicioClases
         public List<string> TituloMedio { get; set; }
         public Carrera()
         {
-            Materia = new List<Materia>();
+           Materia = new List<Materia>();
         }
         public int CantidadAlumnos()
         {
@@ -26,11 +26,37 @@ namespace EjercicioClases
             return totalAlum;
         }
 
-        /*public int CantidadAlumnosNoRepetidos()
+        public int CantidadAlumnosNoRep
         {
-            int totalAlum = 0;
+            get 
+            {
+                return this.Materia.SelectMany(x => x.Alumnos).Distinct().Count();
+            }
 
-        }*/
+        }
+
+        public void AgregarMaterias(Materia materias)       
+        {
+            bool materiaExiste = false;
+            foreach (var item in Materia)
+            {
+                if (item == materias)
+                {
+                    materiaExiste = true;
+                    break;
+                }
+            }
+            if (materiaExiste == false)
+            {
+                Materia.Add(materias);
+            }
+        }
+
+        public int CantidadMaterias()
+        {
+            int cantidadMaterias = Materia.Count();
+            return cantidadMaterias;
+        }
     }
 
 }

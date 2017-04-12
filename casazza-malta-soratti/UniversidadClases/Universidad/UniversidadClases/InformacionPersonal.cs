@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication21.UniversidadClases
 {
-    class InformacionPersonal
+    public class InformacionPersonal
     {
         public string Nombre { get; set; }
         public string Localidad { get; set; }

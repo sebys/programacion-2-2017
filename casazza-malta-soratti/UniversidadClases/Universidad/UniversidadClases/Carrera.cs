@@ -8,22 +8,57 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication21
 {
-    class Carrera
+    public  class Carrera
     {
         public carreras NombreCarrera { get; set; }
-        public List<Materia> Materias { get; set; }
+        private List<Materia> Materias;
         public int TiempoCursado { get; set; }
 
-        public int TotalAlumnos()
+        public Carrera()
         {
-            int TotalA = 0;
-            foreach (var item in Materias)
+            this.Materias = new List<Materia>();
+        }
+
+       
+
+       
+
+        public int CantidadMaterias()
+        {
+            return CantidadMaterias(20); 
+        }
+
+        public int CantidadMaterias(int numero)
+        {
+            return Materias.Count + numero;
+        }
+
+        public void AgregarMateria(Materia materia)
+        {
+            int enc = 0;
+            foreach (Materia item in Materias)
             {
-                TotalA = TotalA + item.Alumnos.Count();
+                if (item.Nombre == materia.Nombre)
+                {
+                    enc = 1;
+                    
+                }
             }
+            if (enc == 0)
+            {
+                Materias.Add(materia);
+            }
+            else
+            {
+                throw new NotSupportedException("No se puede agregar un objeto duplicado.");
+            }
+    
+        
+        }
 
-            return TotalA;
-
+    public int TotalAlumnos()
+        {
+            return this.Materias.SelectMany(x => x.Alumnos).Distinct().Count();
         }
     }
 }

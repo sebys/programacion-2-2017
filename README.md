@@ -4,7 +4,7 @@
 * Bersano, Henzenn
 * Bertone, Storani, Trinchieri
 * Casazza, Malta, Soratti
-* Didoné, Bitschin, Pastore
-* Monier, Bruno
+* Bitschin, Pastore
+* Monier, Bruno, Didoné
 * Rosso, Rodriguez
 * Stradella, Aguilar
