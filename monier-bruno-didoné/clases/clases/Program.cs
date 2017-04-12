@@ -86,16 +86,43 @@ namespace clases
 
     public class Carrera
     {
-        public carreras nomebrecarrera { get; set; }
-        private List<Materia> materias;
+        private static List<Carrera> listadecarreras = new List<Carrera>();
+        public string nomebrecarrera { get; set; }
+        private List<Materia> listamaterias;
         public int añoscursados { get; set; }
         public bool enc { get; set; }
 
-        public Carrera()
+        private Carrera()
         {
             añoscursados = 5;
-            this.materias = new List<Materia>();
+            this.listamaterias = new List<Materia>();
+            
         }
+
+        public static Carrera agregarcarrera(string nombre)  
+        {
+            foreach (var carrera in listadecarreras)
+            {
+                if (carrera.nomebrecarrera == nombre)
+                {
+                    throw new NotSupportedException("No se puede agregar un objeto duplicado.");
+
+                    return carrera;
+                }
+            }
+
+            Carrera nuevacarrera = new Carrera();
+            nuevacarrera.nomebrecarrera = nombre;
+            listadecarreras.Add(nuevacarrera);
+            return nuevacarrera;
+        }
+
+
+
+
+
+
+
 
         public Carrera(List<Materia> listamaterias) : this()
         {
@@ -108,7 +135,7 @@ namespace clases
             int cantidadalumnos = 0;
             List<Alumno> totalalumnos = new List<Alumno>();
 
-            foreach (var materia in materias)
+            foreach (var materia in listamaterias)
             {
                 foreach (var alumno1 in materia.listaalumnos)
                 {
@@ -135,7 +162,7 @@ namespace clases
         {  
             enc = false;
 
-            foreach (Materia materia in materias)
+            foreach (Materia materia in listamaterias)
             {
                 if (materia.nombremateria == nuevamateria.nombremateria)
                 {
@@ -145,14 +172,14 @@ namespace clases
             }
             if (enc == false)
             {
-                materias.Add(nuevamateria);
+                listamaterias.Add(nuevamateria);
             }           
             else
             {
                 throw new NotSupportedException("No se puede agregar un objeto duplicado.");
             }
 
-            return materias.Count();
+            return listamaterias.Count();
         }
 
         public int CargarMateria(List<Materia> listamaterias)
@@ -229,7 +256,7 @@ namespace clases
     {
         static void Main(string[] args)
         {
-            Carrera Ingenieria = new Carrera();
+            var Ingenieria = Carrera.agregarcarrera("Ingenieria");
             Materia materia1 = new Materia();
             Materia materia2 = new Materia();
             materia1.nombremateria = "Calculo";

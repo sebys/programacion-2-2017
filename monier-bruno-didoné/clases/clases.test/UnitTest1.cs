@@ -10,10 +10,10 @@ namespace clases.test
         public void CarreraDeberiaCalcularTotalAlumnosIgualACero()
         {
             //arange
-            var carrera = new Carrera();
+            var nuevacarrera = Carrera.agregarcarrera("Ingenieria");
 
             //act
-            var total = carrera.TotalAlumnos();
+            var total = nuevacarrera.TotalAlumnos();
 
             //assert
             Assert.AreEqual(0, total);
@@ -30,12 +30,12 @@ namespace clases.test
             materia.listaalumnos.Add(alumno1);
             materia.listaalumnos.Add(alumno2);
 
-            Carrera carrera = new Carrera();
-            carrera.CargarMateria(materia);
+            var nuevacarrera = Carrera.agregarcarrera("Ingenieria");
+            nuevacarrera.CargarMateria(materia);
 
 
             //act
-            var total = carrera.TotalAlumnos();
+            var total = nuevacarrera.TotalAlumnos();
 
             //assert
             Assert.AreEqual(2, total);
@@ -56,13 +56,13 @@ namespace clases.test
             materia1.listaalumnos.Add(alumno1);
             materia1.listaalumnos.Add(alumno2);
 
-            Carrera carrera = new Carrera();
-            carrera.CargarMateria(materia);
-            carrera.CargarMateria(materia1);
+            var nuevacarrera = Carrera.agregarcarrera("Ingenieria");
+            nuevacarrera.CargarMateria(materia);
+            nuevacarrera.CargarMateria(materia1);
 
 
             //act
-            var total = carrera.TotalAlumnos();
+            var total = nuevacarrera.TotalAlumnos();
 
             //assert
             Assert.AreEqual(2, total);
@@ -73,12 +73,12 @@ namespace clases.test
         public void DeberíaPoderAgregarMateria()
         {
             //arange
-            var carrera = new Carrera();
+            var nuevacarrera = Carrera.agregarcarrera("Ingenieria");
             var materia = new Materia();
             materia.nombremateria = "Programacion";
 
             //act
-            var totalmateria = carrera.CargarMateria(materia);
+            var totalmateria = nuevacarrera.CargarMateria(materia);
 
             //assert
             Assert.AreEqual(1, totalmateria);
@@ -89,7 +89,7 @@ namespace clases.test
         public void NoDeberíaPoderAgregarMateriaDuplicada()
         {
             //arange
-            var carrera = new Carrera();
+            var nuevacarrera = Carrera.agregarcarrera("Ingenieria");
             var materia = new Materia();
             var materia1 = new Materia();
             var materia2 = new Materia();
@@ -98,9 +98,9 @@ namespace clases.test
             materia2.nombremateria = "Calculo";
 
             //act
-            carrera.CargarMateria(materia);
-            carrera.CargarMateria(materia1);
-            carrera.CargarMateria(materia2);
+            nuevacarrera.CargarMateria(materia);
+            nuevacarrera.CargarMateria(materia1);
+            nuevacarrera.CargarMateria(materia2);
 
             //assert - Exected Exception
         }
@@ -115,6 +115,19 @@ namespace clases.test
 
             //assert
             Assert.AreEqual(un1, un2);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(NotSupportedException))]
+        public void NoPermitaAgregarMasDeUnaCarreraConElMismoNombre()
+        {
+            //arange
+            Carrera.agregarcarrera("Ingenieria");
+
+            //act
+            Carrera.agregarcarrera("Ingenieria");
+
+            //assert -Expected Exception
         }
     }
 }
