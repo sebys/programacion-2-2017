@@ -52,6 +52,7 @@
     <Compile Include="UniversidadClases\DepartamentoContable.cs" />
     <Compile Include="UniversidadClases\InformacionPersonal.cs" />
     <Compile Include="UniversidadClases\Materia.cs" />
+    <Compile Include="UniversidadClases\MateriasEventArgs.cs" />
     <Compile Include="UniversidadClases\Persona.cs" />
     <Compile Include="UniversidadClases\Profesor.cs" />
     <Compile Include="UniversidadClases\Program.cs" />

@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication21.UniversidadClases
 {
+    public delegate void DelegadosMaterias(object sender, MateriasEventArgs e);
     public class Materia
     {
+        
+
+        public event DelegadosMaterias OnAlumnos;
+
         public string Nombre { get; set; }
         public int CantidadHoras { get; set; }
         public List<Alumno> Alumnos { get; set; }
@@ -23,6 +28,20 @@ namespace ConsoleApplication21.UniversidadClases
             {
                 materias.Add(item);
             }
+        }
+
+
+        public void ContarAlumnos(List<Alumno> alumnos)
+        {
+            if (alumnos.Count > 5)
+            {
+                if (OnAlumnos != null)
+                {
+                    OnAlumnos(this, new MateriasEventArgs(Nombre, alumnos.Count));
+                }
+                   
+            }
+          
         }
     }
 }
