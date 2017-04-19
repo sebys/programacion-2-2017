@@ -25,33 +25,57 @@ namespace ConsoleApplication2
 
     public enum DepartamentosAcademicos { Santiago, Rafaela, Olivos, Jujuy}
 
-    public class universidad
-    {
-        public List<DepartamentosAcademicos> Departamentos { get; set; }
-    }
+    public class Universidad
+    {       
+        public DepartamentosAcademicos Departamento { get; set; }
 
+        public Universidad(DepartamentosAcademicos d) { this.Departamento = d; }
+
+        private static List<Universidad> departamentos = new List<Universidad>();
+
+        public static Universidad AgregarDepartamento(DepartamentosAcademicos d)
+        {
+            foreach(Universidad u in departamentos)
+            {
+                if (u.Departamento == d )return u;
+            }
+            Universidad univ = new Universidad(d);
+            departamentos.Add(univ);
+
+            return univ;
+        }
+    }
+    
     public class Persona
     {
         public Direccion DireccionPersona { get; set; }
         public string Nombre { get; set; }
         public int Edad { get; set; }
-
     }
 
     public class Año
     {
         public List<Materia> Materias { get; set; }
-
+        public Año()
+        {
+            this.Materias = new List<Materia>();
+        }
     }
     
     public class Carrera
     {
-
         public string JefeCatedra { get; set; }
         public List<Año> MateriasAño { get; set; }
         public int AñosCursado { get; set; }
         public List<DepartamentosAcademicos> DepartamentosCursado { get; set; }
         public List<string> Titulos { get; set; }
+
+        public Carrera()
+        {
+            this.MateriasAño = new List<Año>();
+         //   List<DepartamentosAcademicos> DepartamentosCursado = new List<DepartamentosAcademicos>();
+
+        }
         
         public int TotalAlumnos()
         {
@@ -62,7 +86,7 @@ namespace ConsoleApplication2
             {
                 foreach (var Materia in Año.Materias)
                 {
-                    foreach (var item2 in Materia.Alummnos)
+                    foreach (var item2 in Materia.Alumnos)
                     {
                         foreach (var item in AlumnosTotales)
                         {
@@ -84,13 +108,17 @@ namespace ConsoleApplication2
     public class Materia
     {
         public string Nombre { get; set; }
-        public string Condicion { get; set; }
         public string Horarios { get; set; }
         public List<Materia> CorrelativasFuertes { get; set; }
         public List<Materia> CorrelativasDebiles { get; set; }
-        public List<Alumno> Alummnos { get; set;}
+        public List<Alumno> Alumnos { get; set;}
         public bool RendirLibre { get; set; }
         public bool Promocionar { get; set; }
+
+        public Materia()
+        {
+            this.Alumnos = new List<Alumno>();
+        }
 
     }
 
@@ -98,7 +126,37 @@ namespace ConsoleApplication2
     {
         public string Carrera { get; set; }
         public List<Materia> MateriasCursadas { get; set; }
+        public List<Materia> MateriasAprobadas { get; set; }
 
+        public string Condicion { get; set; }
+
+
+        public Alumno()
+        {
+            this.MateriasCursadas = new List<Materia>();
+        }
+
+        public Alumno(String nombre):this() 
+        {
+            this.Nombre = nombre;
+        }
+
+        public void AgregarMateria(Materia materia)
+        {
+            this.MateriasCursadas.Add(materia);
+        }
+
+        public void AgregarMateria(Materia materia, bool condicion)
+        {
+            if (condicion)
+            {
+                this.MateriasAprobadas.Add(materia);
+            }
+            else
+            {
+                this.MateriasCursadas.Add(materia);
+            }
+        }
     }
 
     public class Profesor : Persona
