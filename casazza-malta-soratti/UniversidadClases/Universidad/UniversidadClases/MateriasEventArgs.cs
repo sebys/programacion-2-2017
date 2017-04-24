@@ -8,13 +8,10 @@ namespace ConsoleApplication21.UniversidadClases
 {
     public class MateriasEventArgs
     {
-        public string NombreMateria { get; set; }
-        public int CantAlumnos { get; set; }
-
-        public MateriasEventArgs(string Nombre, int Alumnos)
+        public Alumno alumno { get; set; }
+        public MateriasEventArgs(Alumno agregaralumno)
         {
-            this.CantAlumnos = Alumnos;
-            this.NombreMateria = Nombre;
+            this.alumno = agregaralumno;
         }
     }
 }

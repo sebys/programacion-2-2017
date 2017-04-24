@@ -9,6 +9,7 @@ namespace ConsoleApplication21
 {
     public class Alumno : Persona
     {
+        public string Nombre { get; set; }
         public Carrera carrera { get; set; }
         public int asistencias { get; set; }
     }

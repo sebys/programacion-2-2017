@@ -16,9 +16,23 @@ namespace clases
 
     class Program
     {
-        static void Materia_OnAlumnos(object sender, MateriasEventArgs e)
+        static void Materia_OnAlumnos(object sender, MateriasEventArgs e, List<Alumno> Alumnos)
         {
-            Console.WriteLine("Nombre: {0}, Alumnos: {1}", e.NombreMateria, e.CantAlumnos);
+            int band = 0;
+            foreach (Alumno item in Alumnos)
+            {
+                    if (item.Nombre == e.alumno.Nombre)
+                    {
+                         Console.WriteLine("Esta repetido gato");
+                         band = 1;
+                    }
+                }
+            if (band == 0)
+            {
+                Console.WriteLine("No esta repetido gato");
+            }
+            
+
         }
 
         static void Main(string[] args)
@@ -26,14 +40,14 @@ namespace clases
             Carrera carrera = new Carrera();
             carrera.AgregarMateria(new Materia { Nombre = "M1" });
             Materia materia = new Materia();
-            for (int i = 0; i < 10; i++)
-            {
-                Alumno alumno = new Alumno();
-                materia.Alumnos.Add(alumno);
-            }
-            
+            Alumno alumno = new Alumno();
+            alumno.Nombre = "Nico";
+            materia.AgregarAlumnos(alumno);
             materia.OnAlumnos += new DelegadosMaterias(Materia_OnAlumnos);
-            materia.ContarAlumnos(materia.Alumnos);
+            materia.AgregarAlumnos(alumno);
+            
+           
+
             Console.ReadLine();
 
         }

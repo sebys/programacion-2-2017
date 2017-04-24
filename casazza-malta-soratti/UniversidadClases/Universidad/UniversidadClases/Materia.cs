@@ -1,4 +1,5 @@
-﻿using System;
+﻿using clases;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication21.UniversidadClases
 {
-    public delegate void DelegadosMaterias(object sender, MateriasEventArgs e);
+    public delegate void DelegadosMaterias(object sender, MateriasEventArgs e, List<Alumno> Alumnos);
     public class Materia
     {
         
@@ -31,17 +32,18 @@ namespace ConsoleApplication21.UniversidadClases
         }
 
 
-        public void ContarAlumnos(List<Alumno> alumnos)
+        public void AgregarAlumnos(Alumno alumno)
         {
-            if (alumnos.Count > 5)
-            {
-                if (OnAlumnos != null)
+               if (OnAlumnos != null)
                 {
-                    OnAlumnos(this, new MateriasEventArgs(Nombre, alumnos.Count));
+                    OnAlumnos(this, new MateriasEventArgs(alumno), Alumnos);
                 }
+
+              
+            Alumnos.Add(alumno);
                    
             }
           
         }
     }
-}
+
