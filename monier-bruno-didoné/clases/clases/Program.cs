@@ -106,8 +106,6 @@ namespace clases
                 if (carrera.nomebrecarrera == nombre)
                 {
                     throw new NotSupportedException("No se puede agregar un objeto duplicado.");
-
-                    return carrera;
                 }
             }
 
